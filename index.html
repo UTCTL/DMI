@@ -14,15 +14,17 @@
 </head>
 <body>
     <div id="container">
-      <header>
-		<a href="http://www.utexas.edu"><img id="ut_logo" alt="UT logo" src="images/ut_logo.png" /></a>
-		<a href="http://ctl.utexas.edu"><img id="ctl_logo" alt="CTL logo" src="images/ctl_logo.png" /></a>
-        <img id="star" src="images/star.png" />
-        <img id="title-img" src="images/title.png" />
-        <div id="banner">
-          <img src="images/DMI_Header_1700x600.jpg" />
-        </div>
-      </header>
+      <div id="header-wrapper">
+	      <header>
+			<a href="http://www.utexas.edu"><img id="ut_logo" alt="UT logo" src="images/ut_logo.png" /></a>
+			<a href="http://ctl.utexas.edu"><img id="ctl_logo" alt="CTL logo" src="images/ctl_logo.png" /></a>
+	        <img id="star" src="images/star.png" />
+	        <img id="title-img" src="images/title.png" />
+	        <div id="banner">
+	          <img src="images/DMI_Header_1700x600.jpg" />
+	        </div>
+	      </header>
+      </div>
       <div id="top-bar">
     	<div class="top-bar-container">
     		<nav>
@@ -69,6 +71,22 @@
       	  
       	  <div id="video-wrapper"><iframe src="http://player.vimeo.com/video/40036508?" width="60%" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe></div>
       	  
+      	  <div class="section">
+	      	  <div class="section-title">
+	      	  	<img src="images/divider2.png" />
+	      	  	<h4>BOOTCAMP</h4>
+	      	  	<img src="images/divider2.png" />
+	      	  	<br />
+	      	  	<p>An intensive 4-week on-site training program</p>
+	      	  </div>
+	      	  
+	      	  <div id="bootcamp-content">
+		      	  <img id="bootcamp-image" src="images/logo_enhanced.png" />
+		      	  <div id="bootcamp-left-col"><p>The DMI bootcamp is a multimedia design and development training program for UT students.</p><br />		      	  <p>Students will have the opportunity to learn from among a core set of digital media technologies including <strong>graphic design, animation, video production, motion graphics, 3D modeling, web development, and mobile development</strong>. Students will also collaborate with other students, learn </p></div>
+		      	  <div id="bootcamp-right-col"><p>Students will have the opportunity to learn from among a core set of digital media technologies including graphic design, animation, video production, motion graphics, 3D modeling, web and mobile development. Students will also collaborate with other students, learn multimedia production best practices, and work with clients on real-world instructional technology projects.  on real-world instructional technology projects washington redskins.</p><div id="learn-more">Learn more</div></div>
+	      	  </div>
+      	  </div>
+      	  
       </div>
     </div>
     <!-- Add fancyBox -->
@@ -89,9 +107,9 @@
 	    var c = $(window).height();
 	    var w = $(window).width();
 	    var banner_height = w*(600/1700)
-		if( $(window).scrollTop() > banner_height ) {
+		if( $(window).scrollTop() >= banner_height ) {
 			$('#top-bar').css({position:'fixed', top: 0});
-			$('#content').css({marginTop: '70px'});
+			$('#content').css({marginTop: '60px'});
 		} else {
 			$('#top-bar').css({position:'relative'});
 			$('#content').css({marginTop: '0px'});
@@ -110,7 +128,7 @@
   </script>
     	<script type="text/javascript">
 	  $(document).ready(function() {
-	    
+	    var w = $(window).width();
 	    $(".vimeo").fancybox({
 	    width: 700,
 	    height: 400,
