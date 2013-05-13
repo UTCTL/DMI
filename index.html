@@ -10,9 +10,19 @@
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,700' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="js/fancybox/source/jquery.fancybox.css?v=2.1.2" type="text/css" media="screen" />
     <script type="text/javascript" src="//use.typekit.net/qsm8dnt.js"></script>
-	<script type="text/javascript">try{Typekit.load();}catch(e){}</script>    
+	<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+	<!-- Add fancyBox -->
+    <script type="text/javascript" src="js/jquery-1.8.2.min.js"></script>
+    <script type="text/javascript" src="js/fancybox/source/jquery.fancybox.pack.js?v=2.1.2"></script>
+    
+	<script type="text/javascript" src="js/greyScale.min.js"></script>
+    
+    <!-- Optionally add helpers - button, thumbnail and/or media -->
+    <script type="text/javascript" src="js/fancybox/source/helpers/jquery.fancybox-media.js?v=1.0.4"></script>
+
 </head>
 <body>
+	<a id="top"></a>
     <div id="container">
       <div id="header-wrapper">
 	      <header>
@@ -29,17 +39,18 @@
     	<div class="top-bar-container">
     		<nav>
     			<ul>
-    				<li>overview</li>
-    				<li>bootcamp</li>
-    				<li><img src="images/logo_small.png" height="45px" ></li>
-    				<li>training</li>
-    				<li>our work</li>
+    				<li><a class="scrollto" href="#overview">overview</a></li>
+    				<li><a class="scrollto" href="#bootcamp">bootcamp</a></li>
+    				<li><a class="scrollto" href="#top"><img src="images/logo_small.png" height="45px" ></li>
+    				<li><a class="scrollto" href="#training">training</a></li>
+    				<li><a class="scrollto" href="#our-work">our work</a></li>
     			</ul>
     		</nav>
     	</div>
       </div>
         
       <div id="content">
+          <a id="overview"></a>
       	  <img id="divider" src="images/divider.png" alt="divider" />
       	  <div id="intro">
       	  	<h1>Bolded intro sentence about dmi, followed by text</h1>
@@ -70,8 +81,8 @@
       	  </div>
       	  
       	  <div id="video-wrapper"><iframe src="http://player.vimeo.com/video/40036508?" width="60%" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe></div>
-      	  
       	  <div class="section">
+      	  <a id="bootcamp"></a>
 	      	  <div class="section-title">
 	      	  	<img src="images/divider2.png" />
 	      	  	<h4>BOOTCAMP</h4>
@@ -83,62 +94,156 @@
 	      	  <div id="bootcamp-content">
 		      	  <img id="bootcamp-image" src="images/logo_enhanced.png" />
 		      	  <div id="bootcamp-left-col"><p>The DMI bootcamp is a multimedia design and development training program for UT students.</p><br />		      	  <p>Students will have the opportunity to learn from among a core set of digital media technologies including <strong>graphic design, animation, video production, motion graphics, 3D modeling, web development, and mobile development</strong>. Students will also collaborate with other students, learn </p></div>
-		      	  <div id="bootcamp-right-col"><p>Students will have the opportunity to learn from among a core set of digital media technologies including graphic design, animation, video production, motion graphics, 3D modeling, web and mobile development. Students will also collaborate with other students, learn multimedia production best practices, and work with clients on real-world instructional technology projects.  on real-world instructional technology projects washington redskins.</p><div id="learn-more">Learn more</div></div>
+		      	  <div id="bootcamp-right-col"><p>Students will have the opportunity to learn from among a core set of digital media technologies including graphic design, animation, video production, motion graphics, 3D modeling, web and mobile development. Students will also collaborate with other students, learn multimedia production best practices, and work with clients on real-world instructional technology projects.  on real-world instructional technology projects washington redskins.</p><div id="learn-more"><p>Learn more</p></div></div>
+	      	  </div>
+      	  </div>
+      	  <div class="section">
+      	  	  <a id="training"></a>
+	      	  <div class="section-title">
+	      	  	<img src="images/divider2.png" />
+	      	  	<h4>TRAINING</h4>
+	      	  	<img src="images/divider2.png" />
+	      	  	<br />
+	      	  	<p>Comprehensive design and development training</p>
+	      	  </div>
+	      	  
+	      	  <div id="training-content">
+	      	  	<div class="training-content-block"><img src="images/indesign.png" />InDesign</div>
+	      	  	<div class="training-content-block"><img src="images/video.png" />Video Production</div>
+	      	  	<div class="training-content-block"><img src="images/illustrator.png" />Illustrator</div>
+				<div class="training-content-block"><img src="images/htmlcss.png" />HTML/CSS</div><br />
+				<div class="training-content-block"><img src="images/photoshop.png" />Photoshop</div>
+				<div class="training-content-block"><img src="images/premiere.png" />Premiere Pro</div>
+				<div class="training-content-block"><img src="images/mobile.png" />Mobile Development</div>
+				<div class="training-content-block"><img src="images/aftereffects.png" />After Effects</div>
+	      	  </div>
+      	  </div>
+      	  <a id="our-work"></a>
+      	  <div class="section">
+	      	  <div class="section-title">
+	      	  	<img src="images/divider2.png" />
+	      	  	<h4>OUR WORK</h4>
+	      	  	<img src="images/divider2.png" />
+	      	  	<br />
+	      	  	<p>A sampling of what we produce</p>
+	      	  </div>
+	      	  
+	      	  <div id="our-work">
+	      	  	<div class="training-content-block"><img class="greyScale" src="images/thumbs/thumb1.png" />Title<p>Short description of the work</p></div>
+	      	  	<div class="training-content-block"><img class="greyScale" src="images/thumbs/thumb2.png" />Title<p>Short description of the work</p></div>
+	      	  	<div class="training-content-block"><img class="greyScale" src="images/thumbs/thumb3.png" />Title<p>Short description of the work</p></div>
+				<div class="training-content-block"><img class="greyScale" src="images/thumbs/thumb4.png" />Title<p>Short description of the work</p></div><br />
+				<div class="training-content-block"><img class="greyScale" src="images/thumbs/thumb5.png" />Title<p>Short description of the work</p></div>
+				<div class="training-content-block"><img class="greyScale" src="images/thumbs/thumb6.png" />Title Pro<p>Short description of the work</p></div>
+				<div class="training-content-block"><img class="greyScale" src="images/thumbs/thumb7.png" />Title<p>Short description of the work</p></div>
+				<div class="training-content-block"><img class="greyScale" src="images/thumbs/thumb8.png" />Title<p>Short description of the work</p></div>
 	      	  </div>
       	  </div>
       	  
+      	  <div class="section">
+	      	  <div class="section-title">
+	      	  	<img src="images/divider2.png" />
+	      	  	<h4>OUR PARTNERS</h4>
+	      	  	<img src="images/divider2.png" />
+	      	  	<br />
+	      	  	<p>Good friends of ours.</p>
+	      	  </div>
+	      	  
+	      	  <div id="partners">
+				<img src="images/logos.png" width= "70%" />
+	      	  </div>
+      	  </div>
+		  
+		  <footer>
+		  	<div id="footer-left">The Digital Media Institute is a project of the <a href="http://ctl.utexas.org">Center for Teaching and Learning</a> at the <a href="http://utexas.org">University of Texas at Austin</a>.<br/>
+			  	<a href="http://www.utexas.edu"><img id="footer-ut" alt="UT logo" src="images/ut_logo.png" /></a>
+				<a href="http://ctl.utexas.edu"><img id="footer-ctl" alt="CTL logo" src="images/ctl_logo.png" /></a>
+		  	</div>
+		  	<div id="footer-right"><a href="mailto:contact@dmi.org"><strong>contact@dmi.org</strong></a></div>
+		  </footer>
+      	  
       </div>
     </div>
-    <!-- Add fancyBox -->
-    <script type="text/javascript" src="js/jquery-1.8.2.min.js"></script>
-    <script type="text/javascript" src="js/fancybox/source/jquery.fancybox.pack.js?v=2.1.2"></script>
-    
-    <!-- Optionally add helpers - button, thumbnail and/or media -->
-    <script type="text/javascript" src="js/fancybox/source/helpers/jquery.fancybox-media.js?v=1.0.4"></script>
     
     <!-- Google Analytics -->
-    <script type="text/javascript">  
-    
-	var fixed = false;
+	<script type="text/javascript">
+	    var fixed = false;
 	
-	$(document).scroll(function() {
-	    var s = $(window).scrollTop();
-	    var d = $(document).height();
-	    var c = $(window).height();
-	    var w = $(window).width();
-	    var banner_height = w*(600/1700)
-		if( $(window).scrollTop() >= banner_height ) {
-			$('#top-bar').css({position:'fixed', top: 0});
-			$('#content').css({marginTop: '60px'});
-		} else {
-			$('#top-bar').css({position:'relative'});
-			$('#content').css({marginTop: '0px'});
-		}
+	    $(document).scroll(function () {
+	        var s = $(window).scrollTop();
+	        var d = $(document).height();
+	        var c = $(window).height();
+	        var w = $(window).width();
+	        var banner_height = w * (600 / 1700)
+	        if ($(window).scrollTop() >= banner_height) {
+	            $('#top-bar').css({
+	                position: 'fixed',
+	                top: 0
+	            });
+	            $('#content').css({
+	                marginTop: '60px'
+	            });
+	        } else {
+	            $('#top-bar').css({
+	                position: 'relative'
+	            });
+	            $('#content').css({
+	                marginTop: '0px'
+	            });
+	        }
+	    });
+	
+	    var _gaq = _gaq || [];
+	    _gaq.push(['_setAccount', 'UA-39154283-1']);
+	    _gaq.push(['_trackPageview']);
+	
+	    (function () {
+	        var ga = document.createElement('script');
+	        ga.type = 'text/javascript';
+	        ga.async = true;
+	        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+	        var s = document.getElementsByTagName('script')[0];
+	        s.parentNode.insertBefore(ga, s);
+	    })();
+	</script>
+	<script type="text/javascript">
+	    $(function () {
+	        // fade in the grayscaled images to avoid visual jump
+	        $('.greyScale').hide().fadeIn(1000);
+	    });
+	    // user window.load to ensure images have been loaded
+	    $(window).load(function () {
+	        $('.greyScale').greyScale({
+	            // call the plugin with non-defult fadeTime (default: 400ms)
+	            fadeTime: 500,
+	            reverse: false
+	        });
+	    });
+	
+	    $(document).ready(function () {
+	        var w = $(window).width();
+	        $(".vimeo").fancybox({
+	            width: 700,
+	            height: 400,
+	            helpers: {
+	                overlay: {
+	                    locked: false
+	                }
+	            },
+	            type: 'iframe',
+	            fitToView: false
+	        });
+	    });
+	    
+	$(".scrollto").click(function() {
+		var offset = 60;
+		var target = $(this).attr('href');	
+		var scrollTop = $(document).scrollTop();
+		$('html, body').animate({
+		        scrollTop: $(target).offset().top - offset
+		    }, .5*Math.abs(scrollTop-$(target).offset().top));
 	});
 
-	var _gaq = _gaq || [];
-	_gaq.push(['_setAccount', 'UA-39154283-1']);
-	_gaq.push(['_trackPageview']);
-	
-	(function() {
-	var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-	ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-	var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-	})();
-  </script>
-    	<script type="text/javascript">
-	  $(document).ready(function() {
-	    var w = $(window).width();
-	    $(".vimeo").fancybox({
-	    width: 700,
-	    height: 400,
-		helpers : {
-			overlay : {locked : false}
-		},
-	    type: 'iframe',
-	    fitToView : false
-	    });
-	  });
 	</script>
 </body>
 </html>
